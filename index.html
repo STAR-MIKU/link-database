@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网盘下载 - 1111.APK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#64748b',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .transition-all-300 {
+                transition: all 0.3s ease;
+            }
+            .shadow-card {
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-inter min-h-screen flex flex-col">
+    <!-- 头部导航 -->
+    <header class="bg-white shadow-md py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-cloud text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold text-dark">CloudDrive</h1>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#" class="text-secondary hover:text-primary transition-all-300">首页</a>
+                <a href="#" class="text-secondary hover:text-primary transition-all-300">文件</a>
+                <a href="#" class="text-secondary hover:text-primary transition-all-300">分享</a>
+                <a href="#" class="text-secondary hover:text-primary transition-all-300">帮助</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block bg-primary text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-all-300">
+                    登录
+                </button>
+                <button class="md:hidden text-dark text-xl">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- 面包屑导航 -->
+        <div class="text-sm text-secondary mb-6">
+            <a href="#" class="hover:text-primary">首页</a> &gt; 
+            <span class="text-dark">1111.APK</span>
+        </div>
+
+        <!-- 文件卡片 -->
+        <div class="bg-white rounded-xl shadow-card p-6 mb-8">
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                <!-- 文件图标 -->
+                <div class="flex-shrink-0 w-24 h-24 bg-gray-200 rounded-lg flex items-center justify-center">
+                    <i class="fa fa-android text-4xl text-green-600"></i>
+                </div>
+
+                <!-- 文件信息 -->
+                <div class="flex-grow">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h2 class="text-2xl font-bold text-dark mb-2 md:mb-0">1111.APK</h2>
+                        <div class="flex space-x-3">
+                            <button class="bg-gray-200 hover:bg-gray-300 text-dark px-4 py-2 rounded-md transition-all-300 flex items-center">
+                                <i class="fa fa-share-alt mr-2"></i> 分享
+                            </button>
+                            <button class="bg-gray-200 hover:bg-gray-300 text-dark px-4 py-2 rounded-md transition-all-300 flex items-center">
+                                <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 文件详情 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-center">
+                            <i class="fa fa-file-o text-secondary mr-3 w-5"></i>
+                            <span class="text-secondary">文件类型: APK 应用</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-calendar text-secondary mr-3 w-5"></i>
+                            <span class="text-secondary">修改时间: 2026-04-13</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-download text-secondary mr-3 w-5"></i>
+                            <span class="text-secondary">下载次数: 0</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-hdd-o text-secondary mr-3 w-5"></i>
+                            <span class="text-secondary">文件大小: 未知</span>
+                        </div>
+                    </div>
+
+                    <!-- 下载按钮 -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="1111.APK" download class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-md transition-all-300 flex items-center justify-center text-lg font-medium">
+                            <i class="fa fa-download mr-2"></i> 立即下载
+                        </a>
+                        <button class="bg-gray-200 hover:bg-gray-300 text-dark px-6 py-3 rounded-md transition-all-300 flex items-center justify-center text-lg font-medium">
+                            <i class="fa fa-clock-o mr-2"></i> 稍后下载
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 相关文件 -->
+        <div class="mb-8">
+            <h3 class="text-xl font-bold text-dark mb-4">相关文件</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- 相关文件卡片 1 -->
+                <div class="bg-white rounded-lg shadow-card p-4 hover:shadow-lg transition-all-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded flex items-center justify-center">
+                            <i class="fa fa-file-o text-secondary"></i>
+                        </div>
+                        <span class="font-medium text-dark truncate">示例文件1.txt</span>
+                    </div>
+                    <div class="text-sm text-secondary">2026-04-13 · 1KB</div>
+                </div>
+
+                <!-- 相关文件卡片 2 -->
+                <div class="bg-white rounded-lg shadow-card p-4 hover:shadow-lg transition-all-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded flex items-center justify-center">
+                            <i class="fa fa-file-o text-secondary"></i>
+                        </div>
+                        <span class="font-medium text-dark truncate">示例文件2.txt</span>
+                    </div>
+                    <div class="text-sm text-secondary">2026-04-13 · 2KB</div>
+                </div>
+
+                <!-- 相关文件卡片 3 -->
+                <div class="bg-white rounded-lg shadow-card p-4 hover:shadow-lg transition-all-300">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-gray-200 rounded flex items-center justify-center">
+                            <i class="fa fa-file-o text-secondary"></i>
+                        </div>
+                        <span class="font-medium text-dark truncate">示例文件3.txt</span>
+                    </div>
+                    <div class="text-sm text-secondary">2026-04-13 · 3KB</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-dark text-white py-8 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">CloudDrive</h4>
+                    <p class="text-gray-400">安全、高效的文件存储与分享平台</p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">功能</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-all-300">文件存储</a></li>
+                        <li><a href="#" class="hover:text-white transition-all-300">文件分享</a></li>
+                        <li><a href="#" class="hover:text-white transition-all-300">协作编辑</a></li>
+                        <li><a href="#" class="hover:text-white transition-all-300">版本控制</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">支持</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-all-300">帮助中心</a></li>
+                        <li><a href="#" class="hover:text-white transition-all-300">联系我们</a></li>
+                        <li><a href="#" class="hover:text-white transition-all-300">常见问题</a></li>
+                        <li><a href="#" class="hover:text-white transition-all-300">隐私政策</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">关注我们</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-all-300">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>© 2026 CloudDrive. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 获取文件大小
+        function getFileSize(url, callback) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('HEAD', url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var size = xhr.getResponseHeader('Content-Length');
+                        if (size) {
+                            callback(formatFileSize(parseInt(size)));
+                        } else {
+                            callback('未知');
+                        }
+                    } else {
+                        callback('未知');
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        // 格式化文件大小
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            var k = 1024;
+            var sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            var i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // 页面加载完成后获取文件大小
+        document.addEventListener('DOMContentLoaded', function() {
+            getFileSize('1111.APK', function(size) {
+                var sizeElement = document.querySelector('.flex.items-center:nth-child(4) span');
+                if (sizeElement) {
+                    sizeElement.textContent = '文件大小: ' + size;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
